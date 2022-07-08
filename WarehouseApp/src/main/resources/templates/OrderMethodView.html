@@ -1,0 +1,32 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+<h3>Welcome to Method Order View page!!!</h3>
+<table border="1">
+	<tr>
+		<td>ID</td>
+		<td th:text="${ob.id}"></td>
+	</tr>
+	<tr>
+		<td>Order Mode</td>
+		<td th:text="${ob.orderMode}"></td>
+	</tr>
+	<tr>
+		<td>Order Code</td>
+		<td th:text="${ob.orderCode}"></td>
+	</tr>
+	<tr>
+		<td>Order Type</td>
+		<td th:text="${ob.orderType}"></td>
+	</tr>
+	<tr>
+		<td>Order Acpt</td>
+		<td th:text="${ob.orderAcpt}"></td>
+	</tr>
+	<tr>
+		<td>Description</td>
+		<td th:text="${ob.description}"></td>
+	</tr>
+</table>
+<span th:text="${message}"></span>
+</body>
+</html>

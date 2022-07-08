@@ -1,0 +1,30 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+<h3>Welcome to Method Order Data page!!!</h3>
+<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>MODE</th>
+		<th>CODE</th>
+		<th>TYPE</th>
+		<th>ACCEPT</th>
+		<th>DESCRIPTION</th>
+		<th>OPERATION</th>
+	</tr>
+	<tr th:each="ob:${list}">
+		<td th:text="${ob.id}"> </td>
+		<td th:text="${ob.orderMode}"></td>
+		<td th:text="${ob.orderCode}"></td>
+		<td th:text="${ob.orderType}"></td>
+		<td th:text="${ob.orderAcpt}"></td>
+		<td th:text="${ob.description}"></td>
+		<td>
+			<a th:href="@{/ordermethod/delete/{id}(id=${ob.id})}">DELETE</a> |
+			<a th:href="@{/ordermethod/edit/{id}(id=${ob.id})}">EDIT</a> |
+			<a th:href="@{/ordermethod/view/{id}(id=${ob.id})}">VIEW</a>
+		</td>
+	</tr>
+</table>
+<span th:text="${message}"></span>
+</body>
+</html>
